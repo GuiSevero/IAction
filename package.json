@@ -1,7 +1,7 @@
 {
     "name": "iaction",
     "version": "0.1.0",
-    "description": "HTML5 multiplayer pong with mobile support",
+    "description": "HTML5 multiplayer image action game",
     "main": "dist/iaction.js",
     "directories": {
     "test": "test"
@@ -18,13 +18,12 @@
     },
     "keywords": [
         "game",
-        "pong",
+        "image and action",
         "html5",
         "javascript",
-        "canvas",
-        "b2g",
+        "canvas",        
         "openwebapps"
     ],
-    "author": "Jean Carlo Emer & Ricardo Tomasi",
+    "author": "Guilherme Severo & Cláudio Busatto",
     "license": "MIT"
 }
