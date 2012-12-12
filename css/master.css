@@ -1,0 +1,14 @@
+/* main vs. area */
+#canvasarea { margin-right: 2em; }
+svg, canvas { border: 1px solid silver; }
+#canvas{
+	background-color: white; border: solid 2px; 
+}
+
+/* toolbars */
+.color { width: 2em; height: 2em; }
+.brush { background: black; margin-right: 1em; }
+.tool { margin-right: 1em; }
+
+.textToolbar { height: 2em; }
+
