@@ -32,6 +32,8 @@
 
    <script  type="text/javascript">
         
+
+          //Inicia os objetos de desenho
           console.log('Carregando Canvas');
           PixelCanvas.init(document.getElementById("canvas"), socket, true);  
 
@@ -39,6 +41,8 @@
           activatePixelToolbar(canvastool, PixelCanvas);
 
 
+
+        //Eventos de desenho
         socket.on('drawPixel', function(data){         
           PixelCanvas.redrawPixel(data.x, data.y);
           });
@@ -55,12 +59,11 @@
           PixelCanvas.clearCanvas();
         });
 
+
+        //Ao clicar em "reset" - limpa o desenho atual
          $('#reset-btn').click(function(){
             PixelCanvas.clearCanvas();
             socket.emit('clearCanvas');
       });
-
-
-
         
     </script>

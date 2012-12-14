@@ -17,28 +17,49 @@
           </div> <!-- /row -->        
 
    <script  type="text/javascript">
-
-        
+   //variavel que indica se esta em cooldown ou nao
+   var canOpine = true;
+  
+    //Envia a opiniao do usuario
    $('#btnOpinion').click(function(){
-    socket.emit('opinion', $('#opinion').val(), function(result){
+    //Se pode opinar envia a resposta.
+        if(canOpine){
+            socket.emit('opinion', $('#opinion').val(), function(result){
+              if(result){          
+                r = confirm('Voce Ganhou! Deseja nova partida?');
+                if(r){
+                  socket.emit('newgame');
+                }
+              }else{
+                alert($('#opinion').val() + ' não é a resposta');
+              }
 
-        if(result){          
-          r = confirm('Voce Ganhou! Deseja nova partida?');
-          if(r){
-            socket.emit('newgame');
-          }
-        }else{
-          alert($('#opinion').val() + ' não é a resposta');
+        })
+        }else{ // Não pode opinar. deve estar em cooldown
+            alert('Você ainda não pode opinar')
         }
-
-    })
+        
    })
 
-
+          //Carrega biblioteca de desenho
           console.log('Carregando Canvas');
           PixelCanvas.init(document.getElementById("canvas"), socket);  
 
 
+          //Seta cooldown de oito segundos 
+         socket.on('cooldown', function(){
+            canOpine = false;
+
+            setTimeout(function(){
+              //Depois de 8 segundos pode opinar
+              canOpine = true;
+            }, 8000)
+
+         }) 
+
+
+         //Eventos de desenho
+         
         socket.on('drawPixel', function(data){         
           PixelCanvas.redrawPixel(data.x, data.y);
           });

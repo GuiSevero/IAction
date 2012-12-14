@@ -2,7 +2,7 @@ var PixelCanvas = {
 	target: null,
 	targetCtx: null,
 	drawMode: false,
-	drawColor: "green",
+	drawColor: "black",
 	drawSize: 5,
 	socket: { } ,
 	

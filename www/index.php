@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <title>iAction</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="" >
+    <meta name="description" content="Pagina web gerada com ajuda do bootstrap do twitter" >
     <meta name="author" content="Guilherme Severo, Cláudio Busatto" >
 
     <!-- Le styles -->
@@ -64,7 +64,7 @@
         </div><!--/span-->
         <div class="span10 bgdraw">  
           <div id="main-content"></div>
-        </div>
+        </div>  
       </div><!--/row-->
 
       <hr>
@@ -100,14 +100,13 @@
             var server = "http://<?php echo $_SERVER['SERVER_NAME'] ?>:8000";
             var socket = io && io.connect(server);
 
-
+            //Evento de final de jogo
             socket.on('endgame', function(winner){
                 $('#main-content').html('<h1>' + winner + ' GANHOU O JOGO</h1>');
               })
 
-            $('#main-content').load('login.php');
-
-            console.log(server);
+            //Carrega a pagina de login
+            $('#main-content').load('login.php');           
 
     </script>
     

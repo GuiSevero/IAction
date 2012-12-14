@@ -13,12 +13,18 @@
           </div> <!-- /row -->        
 
    <script  type="text/javascript">
-      
+        
+
+        //Carrega biblioteca de desenho
           console.log('Carregando Canvas');
           PixelCanvas.init(document.getElementById("canvas"), socket, false);  
 
+
+
+        //Seta eventos de desenho
         socket.on('drawPixel', function(data){         
           PixelCanvas.redrawPixel(data.x, data.y);
+
           });
 
         socket.on('changeColor', function(data){
@@ -33,12 +39,14 @@
           PixelCanvas.clearCanvas();
         });
 
-         $('#reset-btn').click(function(){
-            PixelCanvas.clearCanvas();
-            socket.emit('clearCanvas');
-      });
+      //evento que redesenha um desenho ja iniciado - para usuarios que se conectaram apos o jogo comecar
+      // note que este desenho sera propositalmente desenhado em preto e branco  
+      socket.on('repaint', function(paint){
+      console.log('redesenhando');
+        for(i in paint){          
+          PixelCanvas.redrawPixel(paint[i].x, paint[i].y);          
+        }
 
+      })
 
-
-        
     </script>

@@ -25,7 +25,7 @@ var team, username;
 //Connecta no socket
 socket = io && io.connect(server);
 
-
+//Conecta um usuario no servidor
 $('#btnConnect').click(function(){
 
 	if($('#userName').val() == ''){
@@ -48,6 +48,8 @@ $('#btnConnect').click(function(){
 });
 
 
+
+//Inicia o jogo
 $('#btnStartGame').click(function(){
 
 		
@@ -71,6 +73,8 @@ $('#btnStartGame').click(function(){
 });
 
 
+//Atualiza lista de usuarios
+//Objeto game contem as listas de usuarios de cada grupo
 socket.on('refreshUsers', function(game){
 
 	//remove todos os jogadores da tela de status
@@ -97,22 +101,40 @@ socket.on('refreshUsers', function(game){
 })
 
 
+
+//carrega pagina do jogador opinante
 socket.on('startGameOpiner', function(game){
 	$('#userObjective').html('');
-	$('#main-content').load('opiner.php');
+	$('#main-content').load('opiner.php', function(){
+		$('#userObjective').html('<ul class="nav nav-list"><li class="nav-header">Objetivo</li> ' + '<li><b>' + game.objective + '</b></li>'  + '</ul>');
+
+	});
 })
 
+
+//carrega pagina de um jogador desenhista
 socket.on('startGameDrawer', function(game){
-	$('#main-content').load('drawer.php');
-	$('#userObjective').html('<ul class="nav nav-list"><li class="nav-header">Objetivo</li> ' + '<li><b>' + game.objective + '</b></li>'  + '</ul>');
+	$('#main-content').load('drawer.php', function(){
+		$('#userObjective').html('<ul class="nav nav-list"><li class="nav-header">Objetivo</li> ' + '<li><b>' + game.objective + '</b></li>'  + '</ul>');	
+		
+	});
+	
 })
 
+
+//carrega pagina de um jogador observador
 socket.on('startGameWatcher', function(game){
-	$('#main-content').load('watcher.php');
-	$('#userObjective').html('<ul class="nav nav-list"><li class="nav-header">Objetivo</li> ' + '<li><b>' + game.objective + '</b></li>' + '</ul>');
+	$('#main-content').load('watcher.php', function(){
+		$('#userObjective').html('<ul class="nav nav-list"><li class="nav-header">Objetivo</li> ' + '<li><b>' + game.objective + '</b></li>' + '</ul>');	
+
+		if(game.started){
+			socket.emit('repaint');
+		}
+
+	});
+	
 })
 
-
-
+//OBS: Estas paginas serao carregadas conforme o servidor enviar o evento
 
 </script>
