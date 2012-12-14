@@ -1,3 +1,8 @@
+
+### UNIVERSIDADE FEDERAL DO RIO GRANDE DO SUL - Dezembro / 2012
+---------------
+INF01151 - Sistemas Operacionais II (Claudio Geyer, Pedro de Botelho Marcos)
+
 ### Servidor criado para o NodeJS com os frameworks Socket.IO e ExpressJS
 
 - Autores: Guilherme Severo e Claudio Busatto
@@ -19,7 +24,3 @@
   
 
 
-
-### UNIVERSIDADE FEDERAL DO RIO GRANDE DO SUL - Dezembro / 2012
----------------
-INF01151 - Sistemas Operacionais II (Claudio Geyer, Pedro de Botelho Marcos)
