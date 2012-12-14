@@ -12,14 +12,14 @@
 - Twitter Bootstrap - twitter.github.com/bootstrap/ - Usado para gerar a pagina em HTML5
 
 ### Manual: 
-- Coloque os arquivos da pasta `www` no seu servidor web com php (ex: ApachePHP, XAMPP, WAMPP)
-- Instalo o NodeJS e rode o script server.js contido na pasta `server`. Certifique-se que a porta 8000 esteja livre
-	ou atualize a porta no arquivo server.js e index.php
+- Coloque os arquivos da pasta `www` no seu servidor web com php (ex: `ApachePHP`, `XAMPP`, `WAMPP`)
+- Instalo o NodeJS e rode o script `server.js` contido na pasta `server`. Certifique-se que a porta 8000 esteja livre
+	ou atualize a porta no arquivo `server.js` e `index.php`
 - Feito isso eh soh voce conectar os jogadores no endereco do seu servidor apache. Ex: serivdor.com
   
 
 
 
-UNIVERSIDADE FEDERAL DO RIO GRANDE DO SUL - Dezembro / 2012
+### UNIVERSIDADE FEDERAL DO RIO GRANDE DO SUL - Dezembro / 2012
 ---------------
 INF01151 - Sistemas Operacionais II (Claudio Geyer, Pedro de Botelho Marcos)
