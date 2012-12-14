@@ -1,6 +1,6 @@
 ### UNIVERSIDADE FEDERAL DO RIO GRANDE DO SUL - Dezembro / 2012
 ---------------
-INF01151 - Sistemas Operacionais II (Claudio Geyer, Pedro de Botelho Marcos).
+INF01151 - Sistemas Operacionais II (Claudio Geyer, Pedro de Botelho Marcos). tag_br
 Versão simplificada (modificada) do jogo "Imagem e Ação".
 Neste jogo, os participantes são divididos em times e, em cada rodada, um participante deve desenhar algo para ser adivinhado por seus colegas de time.
 
