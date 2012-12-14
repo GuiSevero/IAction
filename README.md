@@ -13,6 +13,8 @@ Neste jogo, os participantes são divididos em times e, em cada rodada, um parti
 
 - Frameworks, APIs e Bibliotecas:
 
+- Apresentação - https://github.com/GuiSevero/IAction/blob/master/Apresentacao.pdf
+
 - NodeJS - http://nodejs.org/ - usado para javascript server-side. roda o motor V8 do google 
 
 - Socket.IO - https://github.com/learnboost/socket.io - Usado para conexao dos usuarios via websockets
