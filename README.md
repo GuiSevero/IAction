@@ -20,13 +20,14 @@ Neste jogo, os participantes são divididos em times e, em cada rodada, um parti
 - Socket.IO - https://github.com/learnboost/socket.io - Usado para conexao dos usuarios via websockets
 
 - ExpressJS - http://expressjs.com/ - Usado em complemento do socket.io para fazer o servidor http
-- Twitter Bootstrap - twitter.github.com/bootstrap/ - Usado para gerar a pagina em HTML5
+- Twitter Bootstrap - http://twitter.github.com/bootstrap/ - Usado para gerar a pagina em HTML5
 
 ### Manual: 
-- Coloque os arquivos da pasta `www` no seu servidor web com php (ex: `ApachePHP`, `XAMPP`, `WAMPP`)
-- Instalo o NodeJS e rode o script `server.js` contido na pasta `server`. Certifique-se que a porta 8000 esteja livre
-	ou atualize a porta no arquivo `server.js` e `index.php`
-- Feito isso eh soh voce conectar os jogadores no endereco do seu servidor apache. Ex: serivdor.com
+- Baixe nosso aplicativo e descompacte na pasta de sua escolha. Link: https://github.com/GuiSevero/IAction/archive/master.zip
+- Baixe e instale o NodeJS. Link: http://nodejs.org/download/
+- Abra o prompt de comando e instale os componentes do Node com o comando `npm install express socket.io`
+- Execute o aplicativo com o comando `node /pasta/para/app/app.js`
+- Abra o aplicativo em um navegador (preferencialmente chrome ou firefox) pelo endereço: `http://localhost:3000`
   
 
 
