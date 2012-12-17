@@ -11,7 +11,7 @@ Neste jogo, os participantes são divididos em times e, em cada rodada, um parti
 
 - Autores: Guilherme Severo e Claudio Busatto
 
-- Frameworks, APIs e Bibliotecas:
+#### Frameworks, APIs e Bibliotecas:
 
 - Apresentação - https://github.com/GuiSevero/IAction/blob/master/Apresentacao.pdf
 
