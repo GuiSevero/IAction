@@ -29,7 +29,6 @@
     </head>
 
   <body>
-<?php echo $_SERVER["SERVER_NAME"] ?>
     <div class="navbar navbar-inverse navbar-fixed-top">
       <div class="navbar-inner">
         <div class="container-fluid">
@@ -89,7 +88,7 @@
     <script type="text/javascript" src="js/socket.io.min.js"></script>
 
           <script  type="text/javascript">
-            var server = 'http://<%= server %>:<%= port %>';
+            var server = '/';
             var socket = io && io.connect(server);
 
             //Evento de final de jogo
