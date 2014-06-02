@@ -4,7 +4,7 @@
  */
 
 exports.index = function(req, res){
-  res.render('index',  { server: 'localhost', port: '3000' });
+  res.render('index',  { server: 'http://sisop2.herokuapp.com/', port: '80' });
 };
 
 
