@@ -4,7 +4,7 @@
  */
 
 exports.index = function(req, res){
-  res.render('index',  { server: 'http://immense-island-7670.herokuapp.com/', port: '80' });
+  res.render('index',  { server: 'http://immense-island-7670.herokuapp.com', port: '80' });
 };
 
 
