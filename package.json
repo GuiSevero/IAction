@@ -2,10 +2,12 @@
   "name": "iaction",
   "version": "0.0.1",
   "author": "Guilherme Severo, Claudio Busatto",
-  "private": true,
+  "main": "app.js",
   "scripts": {
-    "start": "node app"
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "repository": "",  
+  "license": "BSD",
   "dependencies": {
     "express": "3.0.0rc5",
     "ejs": "*",
