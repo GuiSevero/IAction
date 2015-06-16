@@ -34,22 +34,13 @@ Neste jogo, os participantes são divididos em times e, em cada rodada, um parti
 public class Automovel {
 
     public String placa;
-    public String modelo;
-    public String marca;
     public String cor;
 
-
     public void acelera() {
-        return xBoundary;
-
+        System.out.println("Acelerou");
     }
-
     public void freia() {
-        return xBoundary;
-
+        System.out.println("Acelerou");
     }
-
-    //...
 }
-
 ```
