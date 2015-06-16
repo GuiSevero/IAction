@@ -31,22 +31,15 @@ Neste jogo, os participantes são divididos em times e, em cada rodada, um parti
   
 
 ``` java
-public class Programa {
-
-    public static void main(String args[]) {
-        Pessoa p1 = new Pessoa();
-        p1.nome = "Ana Paula";
-        p1.sobrenome = "Fonseca";
-
-        Pessoa p2 = new Pessoa("Ana Paula", "Fonseca");
-
-        Carro c1 = new Carro();
-        c1.placa = "CCF0023";
-        c1.cor = "Amarelo";
-
-        Carro c2 = new Carro("CCF0023", "Amarelo");
-
-    }
+public class Automovel {
+	public String proprietario;
+	private String chassi;
+	public Automovel(String chassi){
+		this.chassi = chassi;
+	}
+	public getChassi(){
+		return this.chassi;
+	}  
 }
 
 ```
