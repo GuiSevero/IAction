@@ -30,4 +30,26 @@ Neste jogo, os participantes são divididos em times e, em cada rodada, um parti
 - Abra o aplicativo em um navegador (preferencialmente chrome ou firefox) pelo endereço: `http://localhost:3000`
   
 
+``` java
+public class Automovel {
 
+    public String placa;
+    public String modelo;
+    public String marca;
+    public String cor;
+
+
+    public void acelera() {
+        return xBoundary;
+
+    }
+
+    public void freia() {
+        return xBoundary;
+
+    }
+
+    //...
+}
+
+```
